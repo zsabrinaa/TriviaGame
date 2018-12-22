@@ -10,6 +10,12 @@ $(document).ready(function () {
         $("#result-button").hide();
         $("#show-number").hide();
     }
+    function show(){
+        $("#question").show();
+        $("#result-button").show();
+        $("#show-number").show();
+
+    }
     hide();
 
     function showResult() {
@@ -66,6 +72,7 @@ $(document).ready(function () {
         if (number === 0) {
             stop();
             showResult();
+            hide();
         }
     }
     function stop() {
@@ -77,9 +84,7 @@ $(document).ready(function () {
     $("#start-button").on("click", function () {
         $("#start-button").hide();
         document.getElementById("header").style.marginTop = "30px";
-        $("#question").show();
-        $("#result-button").show();
-
+       show();
     })
     $("#result-button").on("click", function () {
         $("#done").html("DONE!");
