@@ -1,0 +1,100 @@
+<!DOCtype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, width=device-width">
+    <title>NEENA|TRIVIA GAME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron space" id="header">
+            <div class="container">
+                <h1 class="display-4 text-center niceFont">Trivia Game!</h1>
+            </div>
+        </div>
+        <!-- result -->
+        <div id="done"class="niceFont questionFont centered"></div>
+        <div id="correct-ans" class="niceFont questionFont"></div>
+        <div id="wrong-ans"class="niceFont questionFont" ></div>
+        <div id="un-ans" class="niceFont questionFont"></div>
+        <!--  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="startBtn startBtn1 niceFont" id="start-button">START</div>
+                </div>
+                <!-- question start -->
+                <div class="container niceFont">
+                    <div class="row questionFont centered">
+                        <div class="col-xs-6 " id="show-number"></div>
+                    </div>
+                    <div  id="question">
+                        <p class="questionFont qcentered">Which country is Machu Picchu in?</p>
+                        <form class="choiceFont acentered" id="questionOne">
+                            <input type="radio" name="ans-one" value="1" /> Brazil
+                            <input type="radio" name="ans-one" value="2" /> Peru
+                            <input type="radio" name="ans-one" value="3" /> England
+                            <input type="radio" name="ans-one" value="4" /> South Africa
+                        </form>
+                        <p class="questionFont qcentered">Which country has the fastest internet?</p>
+                        <form class="choiceFont acentered" id="questionTwo">
+                            <input type="radio" name="ans-two" value="1" /> South Korea
+                            <input type="radio" name="ans-two" value="2" /> USA
+                            <input type="radio" name="ans-two" value="3" /> Thailand
+                            <input type="radio" name="ans-two" value="4" /> Japan
+                        </form>
+                        <p class="questionFont qcentered ">What animal smells like popcorn?</p>
+                        <form class="choiceFont acentered" id="questionThree">
+                            <input type="radio" name="ans-three" value="1" /> Sloth
+                            <input type="radio" name="ans-three" value="2" /> Binturongs
+                            <input type="radio" name="ans-three" value="3" /> Guinea Pig
+                            <input type="radio" name="ans-three" value="4" /> Cat
+                        </form>
+                        <p class="questionFont" style ="margin-left: 200px">Do hippos sweat red?</p>
+                        <form class="choiceFont acentered"  id="questionFour">
+                            <input type="radio" name="ans-four" value="1" /> Yes
+                            <input type="radio" name="ans-four" value="2" /> No
+                            <input type="radio" name="ans-four" value="3" /> Hell Naw
+                            <input type="radio" name="ans-four" value="4" /> Maybe
+                        </form>
+                        <p class="questionFont qcentered ">What is the only vegetable that is never sold frozen?</p>
+                        <form class="choiceFont acentered" id="questionFive">
+                            <input type="radio" name="ans-five" value="1" /> Tomato
+                            <input type="radio" name="ans-five" value="2" /> Green Bean
+                            <input type="radio" name="ans-five" value="3" /> Mushroom
+                            <input type="radio" name="ans-five" value="4" /> Lettuce
+                        </form>
+                    </div>
+                </div>
+                <!-- end question -->
+                <div class="row">
+                        <div class=" col-xs-5 startBtn startBtn1 niceFont" id="result-button">Result</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
