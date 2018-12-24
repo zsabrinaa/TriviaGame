@@ -91,7 +91,6 @@ $(document).ready(function () {
        show();
     })
     $("#result-button").on("click", function () {
-        // $("#done").html("DONE!");
         stop();
         hide();
         showResult();
