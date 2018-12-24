@@ -4,20 +4,20 @@ $(document).ready(function () {
     var correctAns = 0;
     var wrong = 0;
     var unAns = 0;
-
     function hide() {
         $("#question").hide();
         $("#result-button").hide();
         $("#show-number").hide();
+        $("#restart-button").hide();
     }
+    hide();
+    
     function show(){
         $("#question").show();
         $("#result-button").show();
         $("#show-number").show();
-
     }
-    hide();
-
+    
     function showResult() {
         if ($('input[name=ans-one]:checked', '#questionOne').val() == 2) {
             correctAns++;
@@ -59,13 +59,17 @@ $(document).ready(function () {
         else {
             wrong++;
         }
+        $("#done").html("DONE!");
         $("#correct-ans").html("Correct Answer:" + "  " + correctAns);
         $("#wrong-ans").html("Wrong Answer:" + "  " + wrong);
         $("#un-ans").html("Unanswered:" + "  " + unAns);
+        $("#restart-button").show();
     }
+    
     function run() {
         intervalId = setInterval(decrement, 1000);
     }
+    
     function decrement() {
         number--;
         $("#show-number").html("<h2>" + 'HURRY UP!' + " " + number + '  ' + 'Seconds' + "</h2>");
@@ -78,8 +82,8 @@ $(document).ready(function () {
     function stop() {
         clearInterval(intervalId);
     }
-    //   start game
-
+    
+    //   start game //
     $("#start-button").on("click", run);
     $("#start-button").on("click", function () {
         $("#start-button").hide();
@@ -87,11 +91,11 @@ $(document).ready(function () {
        show();
     })
     $("#result-button").on("click", function () {
-        $("#done").html("DONE!");
-        showResult();
+        // $("#done").html("DONE!");
         stop();
         hide();
-
+        showResult();
     })
+    //end //
 
 })
